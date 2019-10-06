@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Filtertable with css
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value =
+                    $(this).val().toLowerCase()
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                })
+            })
+        })
+    </script>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+    -->
+
+    <!-- Filtertable another example
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase()
+                $("#myList li").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                })
+            })
+        })
+    </script>
+    -->
+
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myDIV *").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Filtertable with css
+    <h2>Filterable Table</h2>
+    <p>Type something in the input field to search the table for first names, last names or emails:</p>
+    <input id="myInput" type="text" placeholder="Search..">
+    <br><br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+            </tr>
+            <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>mary@example.com</td>
+            </tr>
+            <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+            </tr>
+            <tr>
+                <td>Anja</td>
+                <td>Ravendale</td>
+                <td>a_r@example.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
+    -->
+
+    <!-- Filtertable another example 
+    <h2>Filterable List</h2>
+    <p>Type something in the input field to search the list for specific items:</p>
+    <input id="myInput" type="text" placeholder="Search..">
+    <br>
+
+    <ul id="myList">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth</li>
+    </ul>
+    -->
+
+    <h2>Filter Anything</h2>
+    <p>Type something in the input field to search for a specific text inside the div element with id="myDIV":</p>
+    <input id="myInput" type="text" placeholder="Search..">
+
+    <div id="myDIV">
+        <p>I am a paragraph.</p>
+        <div>I am a div element inside div.</div>
+        <button>I am a button</button>
+        <button>Another button</button>
+        <p>Another paragraph.</p>
+    </div>
+
+</body>
+
+</html>

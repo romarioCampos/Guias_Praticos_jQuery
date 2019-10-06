@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Return the background-color of p 
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                alert("Background color = " + $("p").css("background-color"))
+            })
+        })
+    </script>
+    -->
+
+    <!-- Turn it all paragraphs with background-color: yellow 
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").css("background-color", "yellow")
+            })
+        })
+    </script>
+    -->
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").css({ "background-color": "yellow", "font-size": "200%" })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <!-- Return the background-color of p 
+    <h2>This is a heading</h2>
+
+    <p style="background-color: #ff0000">This is a paraggraph.</p>
+    <p style="background-color: #00ff00">This is a paraggraph.</p>
+    <p style="background-color: #0000ff">This is a paraggraph.</p>
+
+    <button>Return background-color of p</button>
+    -->
+
+    <!-- Turn it all paragraphs with background-color: yellow 
+    <h2>This is a heading</h2>
+
+    <p style="background-color:#ff0000">This is a paragraph.</p>
+    <p style="background-color:#00ff00">This is a paragraph.</p>
+    <p style="background-color:#0000ff">This is a paragraph.</p>
+
+    <p>This is a paragraph.</p>
+
+    <button>Set background-color of p</button>
+    -->
+
+    <h2>This is a heading</h2>
+
+    <p style="background-color:#ff0000">This is a paragraph.</p>
+    <p style="background-color:#00ff00">This is a paragraph.</p>
+    <p style="background-color:#0000ff">This is a paragraph.</p>
+
+    <p>This is a paragraph.</p>
+
+    <button>Set multiple styles for p</button>
+</body>
+
+</html>

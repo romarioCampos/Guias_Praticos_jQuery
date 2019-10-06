@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#test1").text("Hello world!")
+            })
+            $("#btn2").click(function () {
+                $("#test2").html("<b>Hello world!</b>")
+            })
+            $("#btn3").click(function () {
+                $("#test3").val("Dolly Duck")
+            })
+        })
+    </script>
+
+    <!-- Show Old/New Text and Show Old/New HTML
+    <script>
+        $(document).ready(function () {
+            $("#btn4").click(function () {
+                $("#test4").text(function (i, origText) {
+                    return "Old text: " + origText + "New text: Hello world! (index: " + i + ")"
+                })
+            })
+
+            $(document).click(function () {
+                $("#test5").html(function (i, origText) {
+                    return "Old html: " + origText + " New html: Hello <b>world!</b> (index: " + i + ")"
+                })
+            })
+        })
+    </script>
+    -->
+
+    <!-- Changed the link from W3Schools
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#w3s").attr("href", "https://www.w3schools.com/jquery/");
+            })
+        })
+    </script>
+    -->
+
+    <!-- Access the link JQuery tutorial 
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#w3s").attr({
+                    "href": "https://www.w3schools.com/jquery/",
+                    "title": "W3Schools jQuery Tutorial"
+                })
+            })
+        })
+    </script>
+    -->
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#w3s").attr("href", function (i, origValue) {
+                    return origValue + "/jquery/"
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <p id="test1">This is a paragraph.</p>
+    <p id="test2">This is another paragraph.</p>
+
+    <p>Input filed: <input type="text" id="test3" value="Mickey Mouse"></p>
+
+    <button id="btn1">Set Text</button>
+    <button id="btn2">Set HTML</button>
+    <button id="btn3">Set Value</button>
+    <hr>
+
+    <!-- Show Old/New Text and Show Old/New HTML
+    <p id="test4">This is a <b>bold</b> paragraph.</p>
+    <p id="test5">This is another <b>bold</b> paragraph.</p>
+
+    <button id="btn4">Show Old/New Text</button>
+    <button id="btn5">Show Old/New HTML</button>
+    <hr>
+    -->
+
+    <!-- Changed the link from W3Schools
+    <p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+
+    <button>Change href Value</button>
+
+    <p>Mouse over the link (or click on it) to see that the value of the href attribute has changed.</p>
+    <hr>
+    -->
+
+    <!-- Access the link JQuery tutorial 
+    <p><a href="https://www.w3schools.com" title="some title" id="w3s">W3Schools.com</a></p>
+
+    <button>Change href and title</button>
+
+    <p>Mouse over the link to see that the href attribute has changed and a title attribute is set.</p>
+    <hr>
+    -->
+
+    <p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+
+    <button>Change href Value</button>
+
+    <p>Mouse over the link (or click on it) to see that the value of the href attribute has changed.</p>
+</body>
+
+</html>

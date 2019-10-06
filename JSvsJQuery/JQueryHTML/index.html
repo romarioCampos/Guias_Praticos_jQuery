@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Setting Text Content</h1>
+
+    <h2 id="01">Hello World!</h2>
+    <h2 id="02">Hello Sweden!</h2>
+
+    <script>
+        $(document).ready(function () {
+            var myElement = $("#01")
+            myElement.text("Hello Sweden!")
+        })
+    </script>
+    <hr>
+
+    <h1>Getting Text Content</h1>
+
+    <h2 id="01">Hello World!</h2>
+    <h2 id="02">Hello Sweden!</h2>
+    <h2 id="03">Hello Japan!</h2>
+
+    <p id="demo01"></p>
+
+    <script>
+        $(document).ready(function () {
+            var myElement = $("#02");
+            var myText = myElement.text();
+            $("#demo01").text(myText);
+        });
+    </script>
+    <hr>
+
+    <h1>Setting HTML</h1>
+
+    <div id="03">
+        <h2>Hello World!</h2>
+    </div>
+    <div id="04">
+        <h2>Hello Sweden!</h2>
+    </div>
+
+    <p id="demo02"></p>
+
+    <script>
+        $(document).ready(function () {
+            var myElement = $("#04");
+            myElement.html("<p>Hello World!</p>");
+        });
+    </script>
+    <hr>
+
+    <h1>Setting HTML</h1>
+
+    <div id="05">
+        <h2>Hello World!</h2>
+    </div>
+    <div id="06">
+        <h2>Hello Sweden!</h2>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            var content = $("#06").html();
+            $("#05").html(content);
+        });
+    </script>
+</body>
+
+</html>

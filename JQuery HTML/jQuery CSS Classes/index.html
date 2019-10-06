@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- addClass() on Heading and paragraph 
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("h1, h2, p").addClass("blue")
+                $("div").addClass("important")
+            })
+        })
+    </script>
+    -->
+
+    <!-- addClass() on div 
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#div1").addClass("important blue")
+            })
+        })
+    </script>
+    -->
+    <!-- addClass() removed the class from headings 
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("h1, h2, p").removeClass("blue")
+            })
+        })
+    </script>
+    -->
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("h1, h2, p").toggleClass("blue")
+            })
+        })
+    </script>
+
+    <style>
+        .important {
+            font-weight: bold;
+            font-size: xx-large
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- addClass() on Heading and paragraph 
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <div>This is some important text!</div>
+
+    <button>Add Classes to elements</button>
+    -->
+
+    <!-- addClass() on div 
+    <div id="div1">This is some text.</div>
+    <div id="div2">This is some text.</div><br>
+
+    <button>Add classes to first div element</button>
+    -->
+
+    <!-- addClass() removed the class from headings 
+    <h1 class="blue">Heading 1</h1>
+    <h2 class="blue">Heading 2</h2>
+
+    <p class="blue">This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <button>Remove class from elements</button>
+    -->
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <button>Toggle class</button>
+</body>
+
+</html>

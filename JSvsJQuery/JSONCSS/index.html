@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Getting Text Content</h1>
+
+    <h2 id="01">Hello World!</h2>
+    <h2 id="02">Hello Sweden!</h2>
+    <h2 id="03">Hello Japan!</h2>
+
+    <p id="demo01"></p>
+
+    <script>
+        $(document).ready(function () {
+            var myElement = $("#02");
+            myElement.hide();
+        })
+    </script>
+    <hr>
+
+    <h1>Showing HTML Elements</h1>
+
+    <h2 id="04" style="display:none">Hello World!</h2>
+    <h2 id="05" style="display:none">Hello Sweden!</h2>
+    <h2 id="06" style="display:none">Hello Japan!</h2>
+
+    <script>
+        $(document).ready(function () {
+            var myElement = $("#05");
+            myElement.show();
+        });
+    </script>
+    <hr>
+
+    <p id="demo02">JavaScript can change the style of an HTML element.</p>
+
+    <script>
+        $(document).ready(function () {
+            var myElement = $("#demo02");
+            myElement.css("font-size", "35px");
+        });
+    </script>
+</body>
+
+</html>

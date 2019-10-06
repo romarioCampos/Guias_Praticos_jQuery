@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .descendants * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Current element <p></p>(child) 
+    <script>
+        $(document).ready(function () {
+            $("div").children().css({ "color": "red", "border": "2px solid red" })
+        })
+    </script>
+    -->
+
+    <!-- Current element with one <p></p>(child)
+    <script>
+        $(document).ready(function () {
+            $("div").children("p.first").css({ "color": "red", "border": "2px solid red" })
+        })
+    </script>
+    -->
+
+    <!-- Current element with two <span></span>(grandchild) 
+    <script>
+        $(document).ready(function () {
+            $("div").find("span").css({ "color": "red", "border": "2px solid red" })
+        })
+    </script>
+    -->
+
+    <script>
+        $(document).ready(function () {
+            $("div").find("*").css({ "color": "red", "border": "2px solid red" });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Current element with two <p></p>(child)
+    <div class="descendants" style="width:500px;">div (current element)
+        <p>p (child)
+            <span>span (grandchild)</span>
+                    </p>
+                    <p>p (child)
+            <span>span (grandchild)</span>
+                    </p>
+                </div>
+                -->
+
+    <!-- Current element with one <p></p>(child)
+    <div class="descendants" style="width:500px;">div (current element)
+        <p class="first">p (child)
+            <span>span (grandchild)
+            </span>
+                    </p>
+                    <p class="second">p (child)
+            <span>span (grandchild)
+            </span>
+                    </p>
+                </div>
+                -->
+
+    <!-- Current element with two <span></span>(grandchild)
+    <div class="descendants" style="width:500px;">div (current element)
+        <p>p (child)
+            <span>span (grandchild)</span>
+                    </p>
+                    <p>p (child)
+            <span>span (grandchild)</span>
+                    </p>
+                </div>
+                -->
+
+    <div class="descendants" style="width:500px;">div (current element)
+        <p>p (child)
+            <span>span (grandchild)</span>
+        </p>
+        <p>p (child)
+            <span>span (grandchild)</span>
+        </p>
+    </div>
+</body>
+
+</html>

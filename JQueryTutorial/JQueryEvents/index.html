@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("p").click(function () {
+                $(this).hide()
+            })
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("p").dbclick(function () {
+                $(this).hide()
+            })
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#p1").mouseenter(function () {
+                alert("You entered p1!")
+            })
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#p2").mouseleave(function () {
+                alert("Bye! You now leave p2!")
+            })
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#p3").mousedown(function () {
+                alert("Mouse down over p3!")
+            })
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#p4").mouseup(function () {
+                alert("Mouse up over p4!")
+            })
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#p5").hover(function () {
+                alert("You entered p5!");
+            },
+                function () {
+                    alert("Bye! You now leave p5!")
+                })
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("input").focus(function () {
+                $(this).css("background-color", "yellow")
+            })
+            $("input").blur(function () {
+                $(this).css("background-color", "green")
+            })
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("p").on("click", function () {
+                $(this).hide()
+            })
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("p").on({
+                mouseenter: function () {
+                    $(this).css("background-color", "lightgray")
+                },
+                mouseleave: function () {
+                    $(this).css("background-color", "lightblue")
+                },
+                click: function () {
+                    $(this).css("background-color", "yellow")
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <p>If you click on me, I will disappear.</p>
+    <p>Click me away!</p>
+    <p>Click me too!</p>
+    <hr>
+
+    <p>If you double-click on me, I will disappear.</p>
+    <p>Click me away!</p>
+    <p>Click me too!</p>
+    <hr>
+
+    <p id="p1">Enter this paragraph.</p>
+    <hr>
+
+    <p id="p2">Enter this paragraph.</p>
+    <hr>
+
+    <p id="p3">Enter this paragraph.</p>
+    <hr>
+
+    <p id="p4">Enter this paragraph.</p>
+    <hr>
+
+    <p id="p5">Enter this paragraph.</p>
+    <hr>
+
+    Name: <input type="text" name="fullname">
+    Email: <input type="text" name="email">
+    <hr>
+</body>
+
+</html>

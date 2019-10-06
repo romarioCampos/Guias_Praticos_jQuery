@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Show dimensions width() and height() 
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                var txt = "";
+                txt += "Width of div: " + $("#div1").width() + "</br>"
+                txt += "Height of div: " + $("#div1").height()
+                $("#div1").html(txt);
+            })
+        })
+    </script>
+    -->
+
+    <!-- Show dimensions innerWidth() and innerHeight()
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                var txt = ""
+                txt += "Width of div: " + $("#div1").width() + "</br>"
+                txt += "Height of div: " + $("#div1").height() + "</br>"
+                txt += "Inner height of div: " + $("#div1").innerHeight()
+                $("#div1").html(txt)
+            })
+        })
+    </script>
+    -->
+
+    <!-- Show dimensions outerWidth() and outerHeight() 
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                var txt = "";
+                txt += "Width of div: " + $("#div1").width() + "</br>"
+                txt += "Height of div: " + $("#div1").height() + "</br>"
+                txt += "Outer width of div: " + $("#div1").outerWidth() + "</br>"
+                txt += "Outer height of div: " + $("#div1").outerHeight()
+                $("#div1").html(txt);
+            })
+        })
+    </script>
+    -->
+
+    <!-- Show dimensions outerWidth() and outerHeight() with margin included
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                var txt = "";
+                txt += "Width of div: " + $("#div1").width() + "</br>"
+                txt += "Height of div: " + $("#div1").height() + "</br>"
+                txt += "Outer width of div (margin included): " + $("#div1").outerWidth(true) + "</br>"
+                txt += "Outer height of div (margin included): " + $("#div1").outerHeight(true)
+                $("#div1").html(txt)
+            })
+        })
+    </script>
+    -->
+
+    <!-- Dimensions of document height and width 
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                var txt = ""
+                txt += "Document width/height: " + $(document).width()
+                txt += "x" + $(document).height() + "\n"
+                txt += "Window width\height: " + $(window).width()
+                txt += "x" + $(document).height()
+                alert(txt)
+            })
+        })
+    </script>
+    -->
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#div1").width(500).height(500)
+            })
+        })
+    </script>
+
+    <style>
+        #div1 {
+            height: 100px;
+            width: 300px;
+            padding: 10px;
+            margin: 3px;
+            border: 1px solid blue;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Show dimensions width() and height() 
+    <div id="div1"></div>
+    <br>
+
+    <button>Display dimensions of div</button>
+
+    <p>width() - returns the width of an element.</p>
+    <p>height() - returns the height of an element.</p>
+    -->
+
+    <!-- Show dimensions innerWidth() and innerHeight() 
+    <div id="div1"></div>
+    <br>
+
+    <button>Display dimensions of div</button>
+
+    <p>innerWidth() - returns the width of an element (includes padding).</p>
+    <p>innerHeight() - returns the height of an element (includes padding).</p>
+    -->
+
+    <!-- Show dimensions outerWidth() and outerHeight() 
+    <div id="div1"></div>
+    <br>
+
+    <button>Display dimensions of div</button>
+
+    <p>outerWidth() - returns the width of an element (includes padding and border).</p>
+    <p>outerHeight() - returns the height of an element (includes padding and border).</p>
+    -->
+
+    <!-- Show dimensions outerWidth() and outerHeight() with margin included
+    <div id="div1"></div>
+    <br>
+
+    <button>Display dimensions of div</button>
+
+    <p>outerWidth(true) - returns the width of an element (includes padding, border, and margin).</p>
+    <p>outerHeight(true) - returns the height of an element (includes padding, border, and margin).</p>
+    -->
+
+    <!-- Dimensions of document height and width 
+    <button>Display dimensions of document and window</button>
+    -->
+
+    <div id="div1"></div>
+    <br>
+
+    <button>Resize div</button>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--  Background-color in the first paragraph 
+    <script>
+        $(document).ready(function () {
+            $("div").first().css("background-color", "yellow")
+        })
+    </script>
+    -->
+
+    <!--  Background-color in the second paragraph 
+    <script>
+        $(document).ready(function () {
+            $("div").last().css("background-color", "yellow");
+        });
+    </script>
+    -->
+
+    <!-- Selected the element <p></p> with eq(1)
+    <script>
+        $(document).ready(function () {
+            $("p").eq(1).css("background-color", "yellow")
+        })
+    </script>
+    -->
+
+    <!-- Selected the element with filter 
+    <script>
+        $(document).ready(function () {
+            $("p").filter(".intro").css("background-color", "yellow")
+        })
+    </script>
+    -->
+
+    <script>
+        $(document).ready(function () {
+            $("p").not(".intro").css("background-color", "yellow")
+        })
+    </script>
+</head>
+
+<body>
+    <!-- Background-color in the first paragraph and second paragraph 
+    <h1>Welcome to My Homepage</h1>
+
+    <p>This is a paragraph.</p>
+
+    <div style="border: 1px solid black;">
+        <p>A paragraph in a div.</p>
+        <p>Another paragraph in a div.</p>
+    </div>
+
+    <div style="border: 1px solid black;">
+        <p>A paragraph in another div.</p>
+        <p>Another paragraph in another div.</p>
+    </div>
+
+    <div style="border: 1px solid black;">
+        <p>A paragraph in another div.</p>
+        <p>Another paragraph in another div.</p>
+    </div>
+    -->
+
+    <!-- Selected the element <p></p> with eq(1)
+    <h1>Welcome to My Homepage</h1>
+
+    <p>My name is Donald (index 0).</p>
+    <p>Donald Duck (index 1).</p>
+    <p>I live in Duckburg (index 2).</p>
+    <p>My best friend is Mickey (index 3).</p>
+    -->
+
+    <h1>Welcome to My Homepage</h1>
+
+    <p>My name is Donald.</p>
+    <p class="intro">I live in Duckburg.</p>
+    <p class="intro">I love Duckburg.</p>
+    <p>My best friend is Mickey.</p>
+
+</body>
+
+</html>

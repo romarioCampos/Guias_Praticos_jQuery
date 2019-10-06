@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Append a paragraph and list 
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("p").append(" <b> Append text </b>.")
+            })
+
+            $("#btn2").click(function () {
+                $("ol").append("<li>Append item</li>")
+            })
+        })
+    </script>
+    -->
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("p").prepend("<b>Prepended text</b>. ");
+            })
+            $("#btn2").click(function () {
+                $("ol").prepend("<li>Prepended item</li>");
+            })
+        })
+    </script>
+
+    <script>
+        function appendText() {
+            var txt1 = "<p>Text.</p>";        // Create text with HTML
+            var txt2 = $("<p></p>").text("Text.");  // Create text with jQuery
+            var txt3 = document.createElement("p");
+            txt3.innerHTML = "Text.";         // Create text with DOM
+            $("body").append(txt1, txt2, txt3);   // Append new elements
+        }
+    </script>
+
+    <!-- Before and after between the image 
+    <script>
+        $(document).ready(function () {
+            $("#btn3").click(function () {
+                $("img").before("<b>Before</b>")
+            })
+
+            $("#btn4").click(function () {
+                $("img").after("<i>After</i>")
+            })
+        })
+    </script>
+    -->
+
+    <script>
+        function afterText() {
+            var txt4 = "<b>I </b>"
+            // Create element with HTML
+            var txt5 = $("<i></i>").text("love ") // Create with jQuery
+            var txt6 = document.createElement("b") // Create with DOM
+            txt6.innerHTML = "jQuery!"
+            $("img").after(txt4, txt5, txt6) // Insert new elements after img
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Append a paragraph and list 
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <ol>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ol>
+
+    <button id="btn1">Append text</button>
+    <button id="btn2">Append list items</button>
+    <hr>
+    -->
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <ol>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ol>
+
+    <button id="btn1">Prepend text</button>
+    <button id="btn2">Prepend list item</button>
+    <hr>
+
+    <p>This is a paragraph.</p>
+    <button onclick="appendText()">Apend text</button>
+    <hr>
+
+    <!-- Before and after between the image 
+    <img src="w3jquery.gif" alt="jQuery" width="100" height="140"><br><br>
+
+    <button id="btn3">Insert before</button>
+    <button id="btn4">Insert after</button>
+    <hr>
+    -->
+
+    <img src="w3jquery.gif" alt="jQuery" width="100" height="140">
+
+    <p>Click the button to insert text after the image.</p>
+
+    <button onclick="afterText()">Insert after</button>
+    <hr>
+</body>
+
+</html>
